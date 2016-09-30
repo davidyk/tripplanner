@@ -16,6 +16,19 @@ var router = require("./routes/router");
 // var wikiRouter = require('./routes/wiki');
 // var usersRouter = require('./routes/users');
 
+console.log("*** dirname", __dirname)
+
+app.use(Express.static(__dirname + '/public'));
+
+app.use(Express.static(__dirname + '/node_modules/bootstrap/dis'));
+
+app.use(Express.static(__dirname + '/node_modules/jquery/dis'));
+
+app.use("/bootstrap/css/bootstrap.min.css", Express.static(__dirname + '/node_modules/bootstrap/css/bootstrap.min.css'));
+app.use(Express.static(__dirname + '/bootstrap/js/bootstrap.min.js'));
+app.use(Express.static(__dirname + '/jquery/jquery.min.js'));
+
+
 app.engine('html', swig.renderFile);
 swig.setDefaults({
   cache: false
@@ -31,9 +44,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.use(Express.static(__dirname + '/node_modules'));
-app.use(Express.static(__dirname + '/public'));
-
+// console.log('dirname',__dirname)
 
 
 app.use('/', router);
@@ -54,10 +65,6 @@ app.use('/', router);
 //     });
 
 
-
-app.get('/', function(req, res, next) {
-  console.log("Ya server is RUNNIN");
-})
 
 app.listen(8080, function(req, res, next) {
   console.log("Server running on 8080...");

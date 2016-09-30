@@ -1,8 +1,9 @@
-var Sequelize = require("sequelize");
-var database = require("./db");
-var db = database.db;
+var db = require("./db");
 
-module.exports = db.define("restaurant", {
+var Sequelize = require("sequelize");
+
+
+var Restaurant = db.define("restaurant", {
   name: {
     type: Sequelize.STRING
   },
@@ -17,3 +18,5 @@ module.exports = db.define("restaurant", {
     }
   }
 });
+
+module.exports = Restaurant;

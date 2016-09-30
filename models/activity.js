@@ -1,8 +1,9 @@
-var Sequelize = require("sequelize");
-var database = require("./db");
-var db = database.db;
+var db = require("./db");
 
-module.exports = db.define("activity", {
+var Sequelize = require("sequelize");
+
+
+var Activity = db.define("activity", {
   name: {
     type: Sequelize.STRING
   },
@@ -10,3 +11,5 @@ module.exports = db.define("activity", {
     type: Sequelize.STRING
   }
 });
+
+module.exports = Activity

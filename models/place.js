@@ -1,11 +1,8 @@
 var Sequelize = require("sequelize");
-var database = require("./db");
-var db = database.db;
+var db = require("./db");
 
-console.log("database", database);
-console.log("db", db);
 
-module.exports = db.define("place", {
+var Place = db.define("place", {
   address: {
     type: Sequelize.STRING
   },
@@ -19,3 +16,5 @@ module.exports = db.define("place", {
     type: Sequelize.ARRAY(Sequelize.FLOAT, Sequelize.FLOAT)
   }
 });
+
+module.exports = Place;
