@@ -6,8 +6,22 @@
     <link href="/stylesheets/style.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-fixed-top">BLAH
-    </nav>
+    <nav class="navbar navbar-fixed-top">BLAH</nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 map" id="map-canvas">
+
+        </div>
+        <div class="col-lg-4">
+           {% block content %} {% endblock %}
+        </div>
+
+
+
+
+
+      </div>
+    </div>
 
 
 
@@ -17,8 +31,9 @@
 
 
 
-     {% block content %} {% endblock %}
   </body>
   <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl4cwYrCU802SzIGaZ1-r_HnIk3AfKLQI&sensor=true"></script>
+  <script src="/js/maps.js"></script>
 </html>

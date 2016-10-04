@@ -1,0 +1,32 @@
+body { padding-top: 50px;
+}
+
+.container {
+  background-color: grey;
+  /*display: inline-block;*/
+  margin-top: 10%;
+}
+
+.navbar {
+  background-color: red;
+}
+
+.day1 {
+  background-color: tan;
+}
+
+.day2 {
+  background-color: teal;
+}
+
+.row {
+  margin: 0px;
+}
+
+#buttonrow {
+  background-color: orange;
+}
+
+#map-canvas {
+  height: 50vh;
+}
